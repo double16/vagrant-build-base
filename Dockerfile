@@ -5,6 +5,7 @@ ARG VAGRANT_VER=1.9.5
 ARG DOCKER_VER=17.05.0-ce
 ARG DOCKER_COMPOSE_VER=1.13.0
 
+RUN yum install -y git openssh-clients
 RUN yum install -y https://releases.hashicorp.com/vagrant/${VAGRANT_VER}/vagrant_${VAGRANT_VER}_x86_64.rpm
 
 RUN vagrant plugin install vagrant-cachier --plugin-version 1.2.1
